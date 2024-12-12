@@ -4,6 +4,7 @@ pragma solidity ^0.8.19;
 import {Script} from "lib/forge-std/src/Script.sol";
 import {Raffle} from "src/Raffle.sol";
 import {HelperConfig} from "script/HelperConfig.s.sol";
+import {CreateSubscription} from "script/Interactions.s.sol";
 
 contract DeployRaffle is Script {
     function run() public {}
@@ -16,6 +17,9 @@ contract DeployRaffle is Script {
 
         if (config.subscriptionId == 0) {
             // create subscription
+            CreateSubscription createSubscription = new CreateSubscription();
+            (config.subscriptionId, config.vrfCoordinator) = createSubscription
+                .createSubscription(config.vrfCoordinator);
         }
 
         vm.startBroadcast();
