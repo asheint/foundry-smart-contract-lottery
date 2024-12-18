@@ -12,7 +12,7 @@ abstract contract CodeConstants {
     // LINK / ETH price
     int256 public constant MOCK_WEI_PER_UNIT_LINK = 4e15;
 
-    uint256 public constant ETH_SEPOLIA_CHAIN_ID = 1115511;
+    uint256 public constant ETH_SEPOLIA_CHAIN_ID = 11155111;
     uint256 public constant LOCAL_CHAIN_ID = 31337;
 }
 
@@ -59,7 +59,7 @@ contract HelperConfig is CodeConstants, Script {
                 interval: 30, // 30 seconds
                 vrfCoordinator: 0x9DdfaCa8183c41ad55329BdeeD9F6A8d53168B1B,
                 gasLane: 0x787d74caea10b2b357790d5b5247c2f63d1d91572a9846f780606e4d953677ae,
-                subscriptionId: 0,
+                subscriptionId: 61207603725928254231995541066620524966337136513364507655038468944553501643389,
                 callbackGasLimit: 500000, // 500,000 gas
                 link: 0x779877A7B0D9E8603169DdbD7836e478b4624789
             });
