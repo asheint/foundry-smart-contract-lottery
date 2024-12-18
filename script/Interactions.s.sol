@@ -45,6 +45,5 @@ contract FundSubscription is Script {
         HelperConfig helperConfig = new HelperConfig();
         address vrfCoordinator = helperConfig.getConfig().vrfCoordinator;
         uint256 subscriptionId = helperConfig.getConfig().subscriptionId;
-        fundSubscription(vrfCoordinator, subId);
     }
 }
